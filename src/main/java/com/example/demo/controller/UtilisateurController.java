@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.Utilisateur;
+import com.example.demo.entity.UtilisateurEntity;
 import com.example.demo.repository.UtilisateurRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,19 +17,19 @@ public class UtilisateurController {
 
     // Endpoint pour récupérer tous les utilisateurs
     @GetMapping
-    public List<Utilisateur> getAllUtilisateurs() {
+    public List<UtilisateurEntity> getAllUtilisateurs() {
         return repository.findAll();
     }
 
     // Endpoint pour créer un nouvel utilisateur
     @PostMapping
-    public Utilisateur createUtilisateur(@RequestBody Utilisateur utilisateur) {
+    public UtilisateurEntity createUtilisateur(@RequestBody UtilisateurEntity utilisateur) {
         return repository.save(utilisateur);
     }
 
     // Endpoint pour récupérer un utilisateur par son ID
     @GetMapping("/{id}")
-    public Utilisateur getUtilisateurById(@PathVariable Long id) {
+    public UtilisateurEntity getUtilisateurById(@PathVariable Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Utilisateur non trouvé"));
     }

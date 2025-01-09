@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "r5a05.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'r5a05.app.jwtSecret'"
+  },
+  {
+    "name": "r5a05.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'r5a05.app.jwtExpirationMs'"
+  }
+]}
